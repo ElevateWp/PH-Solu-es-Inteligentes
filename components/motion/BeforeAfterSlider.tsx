@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useLigueback } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 interface BeforeAfterSliderProps {
@@ -43,7 +43,7 @@ export default function BeforeAfterSlider({
     };
   }, [targetPos]);
 
-  const handlePointerMove = useLigueback((clientX: number) => {
+  const handlePointerMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;

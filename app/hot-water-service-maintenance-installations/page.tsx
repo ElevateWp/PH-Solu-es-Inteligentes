@@ -1,7 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default function LegacyServiceRedirect() {
-  redirect('
-/caldeiras-e-aquecedores/
-');
+  redirect('/caldeiras-e-aquecedores/');
 }

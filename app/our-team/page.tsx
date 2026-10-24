@@ -8,8 +8,8 @@ import { createMetadata } from '@/lib/seo';
 import HomeDentists from '@/components/sections/home/HomeDentists';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Our Team',
-  description: 'Meet the ADM Plumbing Services team. Call +65 8133 9461 to discuss your plumbing needs.',
+  title: 'Nossa equipe',
+  description: 'Conheça Paulo Henrique e a equipe PH Soluções Inteligentes. Ligue +55 21 99481-7430 para conversar sobre seu serviço.',
   pathname: '/our-team/',
 });
 
@@ -18,11 +18,11 @@ export default function TeamPage() {
     <div className="flex w-full flex-col bg-paper">
       <section className="border-b border-mist py-16 md:py-24">
         <div className="mx-auto max-w-site px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Our Team', path: '/our-team/' }]} />
+          <Breadcrumbs items={[{ name: 'Nossa equipe', path: '/our-team/' }]} />
           <div className="mt-8 max-w-3xl">
-            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">ADM Plumbing Services</span>
-            <WordRevealH1 text="Meet the ADM Plumbing Services team." />
-            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">ADM Plumbing Services provides plumbing services and repairs. Call to discuss the work you need.</p>
+            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">PH Soluções Inteligentes</span>
+            <WordRevealH1 text="Conheça a equipe PH Soluções Inteligentes." />
+            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">A PH Soluções Inteligentes trabalha com refrigeração, climatização e elétrica. Entre em contato para conversar sobre o serviço que você precisa.</p>
           </div>
         </div>
       </section>
@@ -32,14 +32,14 @@ export default function TeamPage() {
       <section className="border-b border-mist py-16 md:py-24">
         <div className="mx-auto max-w-site px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
-            <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Areas of work</span>
-            <h2 className="font-display text-33 text-forest-ink md:text-41">Explore our plumbing services</h2>
+            <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Áreas de atuação</span>
+            <h2 className="font-display text-33 text-forest-ink md:text-41">Conheça nossos serviços</h2>
           </AnimateOnScroll>
           <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => <Link key={service.slug} href={`/${service.slug}/`} className="border border-mist bg-paper p-6 transition-colors hover:border-brand">
               <h3 className="font-display text-21 text-forest-ink">{service.name}</h3>
               <p className="mt-3 font-body text-15 leading-relaxed text-forest-ink/75">{service.shortDescription}</p>
-              <span className="mt-5 inline-flex font-body text-13 font-semibold text-brand">Explore service →</span>
+              <span className="mt-5 inline-flex font-body text-13 font-semibold text-brand">Conheça o serviço →</span>
             </Link>)}
           </div>
         </div>
@@ -47,8 +47,8 @@ export default function TeamPage() {
 
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
-          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">ADM Plumbing Services</span><h2 className="font-display text-26 md:text-33">Tell us about your project.</h2></div>
-          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Request a quote</Link>
+          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">PH Soluções Inteligentes</span><h2 className="font-display text-26 md:text-33">Conte o que você precisa.</h2></div>
+          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Solicitar orçamento</Link>
         </div>
       </section>
     </div>

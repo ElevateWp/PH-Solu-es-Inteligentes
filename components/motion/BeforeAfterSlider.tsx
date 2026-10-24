@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useLigueback } from 'react';
 import Image from 'next/image';
 
 interface BeforeAfterSliderProps {
@@ -43,7 +43,7 @@ export default function BeforeAfterSlider({
     };
   }, [targetPos]);
 
-  const handlePointerMove = useCallback((clientX: number) => {
+  const handlePointerMove = useLigueback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
@@ -108,7 +108,7 @@ export default function BeforeAfterSlider({
         }}
         tabIndex={0}
         role="slider"
-        aria-label="Comparison of illustrative plumbing stock photos"
+        aria-label="Comparação ilustrativa de serviços"
         aria-valuenow={Math.round(sliderPos)}
         aria-valuemin={0}
         aria-valuemax={100}

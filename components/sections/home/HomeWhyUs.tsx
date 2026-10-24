@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Clear conversation',
-    description: 'Discuss your plumbing issue and the work you need directly with the team.',
+    title: 'Conversa clara',
+    description: 'Converse diretamente com a equipe sobre o serviço de que precisa.',
   },
   {
-    title: 'Discuss the scope',
-    description: 'Ask about the timing and scope for the plumbing work at your property.',
+    title: 'Alinhe o serviço',
+    description: 'Converse sobre o prazo e o escopo do serviço para seu imóvel.',
   },
   {
-    title: 'Plan the next step',
-    description: 'Talk through the work, quote and next steps before you decide how to proceed.',
+    title: 'Planeje os próximos passos',
+    description: 'Converse sobre o serviço, o orçamento e os próximos passos antes de decidir.',
   },
   {
-    title: 'A range of property services',
-    description: 'The team can discuss toilet, bidet, kitchen sink, hot water pipe and general plumbing repairs.',
+    title: 'Serviços para residências e empresas',
+    description: 'A equipe pode conversar sobre climatização, refrigeração, elétrica, bombas, aquecedores e equipamentos comerciais.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Our Approach
+                Nosso jeito de trabalhar
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Plumbing Services for your property
+                Serviços de Climatização for your property
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,7 +57,7 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Plumbing and building project imagery */}
+          {/* Imagens de serviços técnicos */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="grid grid-cols-2 gap-3">
@@ -66,37 +66,37 @@ export default function HomeWhyUs() {
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
                     src="/images/plumbing-technician.jpg"
-                    alt="Plumbing work in progress"
+                    alt="Serviço técnico em andamento"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#29212A]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Plumbing and plumbing work
+                  <div className="absolute bottom-3 left-3 bg-[#172B45]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Serviços de refrigeração e elétrica
                   </div>
                 </div>
-                {/* Additional plumbing imagery */}
+                {/* Mais imagens de serviços */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/plumbing-repair.jpg"
-                    alt="Plumbing project"
+                    alt="Serviço técnico"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
-                {/* Plumbing project detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#FFF4F6] overflow-hidden border border-mist shadow-sm">
+                {/* Detalhes do serviço */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F7FC] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/plumbing-pipes.jpg"
-                    alt="Plumbing pipes project"
+                    alt="Tubulações e instalações project"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#29212A]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                     Plumbing repairs
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#172B45]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                     Climatizaçãos
                   </div>
                 </div>
               </div>

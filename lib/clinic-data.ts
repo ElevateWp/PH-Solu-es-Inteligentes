@@ -15,58 +15,91 @@ export interface ClinicInformation {
   verifiedStats: { value: number; suffix: string; label: string; description: string }[]; accreditations: string[];
 }
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'ADM Plumbing Services', legalName: 'ADM Plumbing Services', tagline: 'Reliable plumbing services across Singapore, available 24 hours a day.',
-  primaryLocation: { street: '280 Woodlands Industrial Park E5, Harvest @ Woodlands', suite: 'Floor 1', city: 'Singapore', state: '', postalCode: '757322', country: 'SG', directions: '280 Woodlands Industrial Park E5, Harvest @ Woodlands, Singapore 757322', landmarks: 'FQ2R+FJ Singapore' },
-  contact: { phone: '+65 8133 9461', emergencyPhone: '+65 8133 9461', whatsapp: '+65 8133 9461', website: 'https://singaporeplumbingadm.com/' },
-  identityHighlights: ['Toilet bowl and flushing repairs', 'Bidet repairs', 'Kitchen sink repairs', 'Pipe leak and hot water pipe repairs', '24-hour plumbing service'],
-  schedule: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].map((day) => ({ day, hours: 'Open 24 hours' })),
+  name: 'PH Soluções Inteligentes', legalName: 'PH Soluções Inteligentes', tagline: 'Refrigeração, climatização e elétrica com qualidade, segurança e pontualidade.',
+  primaryLocation: { street: '', suite: '', city: 'Campo Grande', state: 'Rio de Janeiro', postalCode: '', country: 'BR', directions: 'Campo Grande, Rio de Janeiro, RJ', landmarks: 'Atendimento em Campo Grande, Barra da Tijuca, Recreio e região' },
+  contact: { phone: '+55 21 99481-7430', emergencyPhone: '+55 21 99481-7430', whatsapp: '+55 21 99481-7430' },
+  identityHighlights: ['Instalação, manutenção e higienização de ar-condicionado', 'Serviços de refrigeração e câmaras frias', 'Instalações e reparos elétricos', 'Conversão e instalação de fogões a gás', 'Bombas d’água e bombas de piscina', 'Caldeiras, aquecedores e equipamentos comerciais'],
+  schedule: ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'].map((day) => ({ day, hours: 'Atendimento 24 horas' })),
   verifiedStats: [
-    { value: 4.9, suffix: '/5', label: 'Google rating', description: 'Based on 309 customer reviews' },
-    { value: 309, suffix: '', label: 'Google reviews', description: 'Customer feedback on Google' },
-  ], accreditations: [],
+    { value: 5.0, suffix: '/5', label: 'Nota no Google', description: '22 avaliações de clientes' },
+    { value: 22, suffix: '', label: 'Avaliações', description: 'Clientes recomendam o atendimento da PH' },
+  ], accreditations: ['Atendimento inclusivo LGBTQ+'],
 };
-const teamId = 'adm-plumbing-services';
-export const DENTISTS: TeamProfile[] = [{ id: teamId, slug: 'adm-plumbing-services', name: 'ADM Plumbing Services', title: 'Plumbing team', qualifications: '', specialization: 'Toilet, bidet, sink and pipe repairs', experienceYears: 10, bio: 'ADM Plumbing Services provides plumbing repairs across Singapore. Contact the team to describe the issue and arrange an assessment.', philosophy: 'Prompt replies, clear quotations and practical plumbing help.', education: [], memberships: [], specialties: CLINIC_INFO.identityHighlights, image: '/images/plumbing-technician.jpg', warmImage: '/images/plumbing-repair.jpg' }];
+const teamId = 'paulo-henrique';
+export const DENTISTS: TeamProfile[] = [{
+  id: teamId, slug: 'paulo-henrique', name: 'Paulo Henrique', title: 'Técnico responsável',
+  qualifications: 'Profissional de refrigeração, climatização e elétrica',
+  specialization: 'Instalação, limpeza, manutenção e reparos de equipamentos',
+  experienceYears: 0,
+  bio: 'Paulo Henrique e a equipe da PH Soluções Inteligentes atendem residências e empresas no Rio de Janeiro. O trabalho é feito com atenção aos detalhes, comunicação clara e compromisso com a qualidade.',
+  philosophy: 'Segurança, pontualidade, transparência e cuidado em cada atendimento.',
+  education: [], memberships: [], specialties: CLINIC_INFO.identityHighlights,
+  image: '/images/plumbing-technician.jpg', warmImage: '/images/plumbing-repair.jpg',
+}];
 const photos = ['/images/plumbing-technician.jpg','/images/plumbing-repair.jpg','/images/plumbing-pipes.jpg','/images/plumbing-hot-water.jpg'];
 const serviceNames: [string,string][] = [
-  ['plumbing-services','Plumbing Services'], ['plumbing-repairs','Plumbing Repairs'], ['toilet-bowl-repair','Toilet Bowl Repair'],
-  ['toilet-flushing-repair','Toilet Flushing System Repair'], ['bidet-repair','Bidet Repair'], ['kitchen-sink-repair','Kitchen Sink Repair'],
-  ['pipe-leak-repair','Pipe Leak Repair'], ['hot-water-pipe-repair','Hot Water Pipe Repair'], ['plumbing-maintenance','Plumbing Maintenance'],
+  ['instalacao-de-ar-condicionado','Instalação de ar-condicionado'],
+  ['limpeza-e-higienizacao-de-ar-condicionado','Limpeza e higienização de ar-condicionado'],
+  ['manutencao-e-conserto-de-ar-condicionado','Manutenção e conserto de ar-condicionado'],
+  ['instalacoes-e-reparos-eletricos','Instalações e reparos elétricos'],
+  ['refrigeracao-e-camaras-frias','Refrigeração e câmaras frias'],
+  ['instalacao-e-conversao-de-fogao-a-gas','Instalação e conversão de fogão a gás'],
+  ['bombas-dagua-e-de-piscina','Bombas d’água e de piscina'],
+  ['caldeiras-e-aquecedores','Caldeiras e aquecedores'],
+  ['conserto-de-maquina-de-lavar','Conserto de máquina de lavar'],
+  ['manutencao-de-chopeira','Manutenção de chopeira'],
 ];
 function createService([slug,name]: [string,string], index:number): ServiceDetail {
-  const situations = [`A problem with your ${name.toLowerCase()}`, 'A leak or water flow issue that needs assessment', 'Advice about repair options and next steps'];
+  const situations = ['Instalação, manutenção preventiva ou reparo do equipamento', 'Queda de desempenho, ruído ou falha no funcionamento', 'Avaliação técnica para escolher o serviço adequado'];
+  const phone = '+55 21 99481-7430';
   return {
-    slug,name,navLabel:name,tagline:`${name} in Singapore.`,shortDescription:`Contact ADM Plumbing Services for ${name.toLowerCase()} in Singapore. WhatsApp photos or a video for an initial assessment.`,
-    clinicalExplanation:`ADM Plumbing Services can assess the issue, explain the repair options and provide a clear quotation before work begins. WhatsApp a photo or video for an initial assessment.`,whoNeeds:situations,
-    benefits:['Over 10 years of plumbing experience','Transparent quotations with no hidden costs','WhatsApp photo or video assessment'],
-    indications:situations.map((condition)=>({condition,explanation:`Describe the issue to ADM Plumbing Services and the team can advise on an assessment.`})),
+    slug,name,navLabel:name,tagline:name + ' no Rio de Janeiro, com atendimento cuidadoso e pontual.',
+    shortDescription:'A PH Soluções Inteligentes atende ' + name.toLowerCase() + ' em Campo Grande, Barra da Tijuca, Recreio e região. Fale pelo WhatsApp para explicar o que precisa.',
+    clinicalExplanation:'A equipe avalia o equipamento e o serviço necessário, explica as opções e combina os próximos passos com você. Cada atendimento é feito com atenção aos detalhes, segurança e compromisso com a qualidade.',
+    whoNeeds:situations,
+    benefits:['Atendimento atencioso e pontual','Explicação clara do serviço antes de começar','Serviços residenciais e comerciais'],
+    indications:situations.map((condition)=>({condition,explanation:'Conte o que está acontecendo e, se puder, envie uma foto ou vídeo pelo WhatsApp para ajudar na avaliação inicial.'})),
     procedureSteps:[
-      {stepNumber:1,title:'Describe the issue',duration:'WhatsApp or call',description:'Explain what is happening and share a photo or video if useful.',clinicalDetails:'The team reviews the details for an initial assessment.'},
-      {stepNumber:2,title:'Arrange an assessment',duration:'By arrangement',description:'Discuss the plumbing issue and arrange a suitable visit.',clinicalDetails:'The plumber assesses the issue and explains the proposed work.'},
-      {stepNumber:3,title:'Review the quotation',duration:'Before work begins',description:'Review the work and quotation before deciding how to proceed.',clinicalDetails:'The quotation is discussed before the repair starts.'},
-      {stepNumber:4,title:'Complete the repair',duration:'As agreed',description:'The plumber completes the agreed repair and checks the work.',clinicalDetails:'Timing depends on the issue and agreed scope.'},
+      {stepNumber:1,title:'Conte o que precisa',duration:'Por telefone ou WhatsApp',description:'Explique o serviço ou o problema e, se for útil, envie uma foto ou vídeo.',clinicalDetails:'A equipe entende o contexto para orientar a avaliação inicial.'},
+      {stepNumber:2,title:'Combine a visita',duration:'Conforme disponibilidade',description:'Converse sobre o local, o equipamento e o melhor horário para atendimento.',clinicalDetails:'O escopo do serviço é alinhado com você.'},
+      {stepNumber:3,title:'Avaliação e orçamento',duration:'Antes do serviço',description:'O profissional avalia o equipamento e apresenta as opções de trabalho.',clinicalDetails:'O serviço e os custos são combinados antes da execução.'},
+      {stepNumber:4,title:'Serviço e conferência',duration:'Conforme o serviço combinado',description:'A equipe realiza o trabalho acordado e confere o funcionamento do equipamento.',clinicalDetails:'O profissional explica o que foi feito ao concluir.'},
     ],
-    recoveryTimeline:[{period:'Before service',expectedSensations:'Describe the issue and share a photo or video.',careProtocol:'If safe, turn off the water supply if a leak is active.'},{period:'During service',expectedSensations:'The plumber will explain the repair being carried out.',careProtocol:'Keep the work area clear.'},{period:'After service',expectedSensations:'The plumber will review the completed work with you.',careProtocol:'Contact ADM if you have a follow-up question.'}],
-    costTransparency:{baseRange:'Request a transparent quotation.',factors:['Type and severity of the plumbing issue','Parts and materials required','Access and time needed'],whatIsIncluded:['Assessment of the reported issue','Explanation of the proposed work','Quotation before work begins'],note:'The cost can be confirmed after the issue has been assessed.'},
-    beforeAfterCase:{category:name,clinicalContext:'Illustrative plumbing service image.',beforeLabel:'Service example',afterLabel:'Service example',beforeImage:photos[index%photos.length],afterImage:photos[(index+1)%photos.length],timeframe:'Timing varies by repair'},assignedDentistId:teamId,
-    faqs:[{question:`What does ${name.toLowerCase()} involve?`,answer:`The plumber assesses the issue, explains the proposed work and provides a quotation before starting.`},{question:'Can I send a photo first?',answer:'Yes. WhatsApp a photo or video of the issue to +65 8133 9461 for an initial assessment.'},{question:'Are you open outside normal business hours?',answer:'ADM Plumbing Services is open 24 hours. Call or WhatsApp +65 8133 9461.'},{question:'How do I arrange a service?',answer:'Call or WhatsApp ADM Plumbing Services on +65 8133 9461.'}],
+    recoveryTimeline:[
+      {period:'Antes do atendimento',expectedSensations:'Explique o que precisa e informe o modelo do equipamento, se souber.',careProtocol:'Compartilhe fotos ou vídeos pelo WhatsApp para facilitar a conversa.'},
+      {period:'Durante o serviço',expectedSensations:'O profissional apresenta a avaliação e explica o trabalho combinado.',careProtocol:'Deixe a área do equipamento livre para o atendimento.'},
+      {period:'Depois do serviço',expectedSensations:'A equipe confere o funcionamento e orienta sobre o trabalho realizado.',careProtocol:'Entre em contato se precisar esclarecer algum detalhe do atendimento.'},
+    ],
+    costTransparency:{baseRange:'Solicite um orçamento pelo WhatsApp.',factors:['Tipo e modelo do equipamento','Serviço e peças necessários','Local e condições de acesso'],whatIsIncluded:['Avaliação do serviço solicitado','Explicação do trabalho recomendado','Alinhamento do orçamento antes da execução'],note:'O valor depende do equipamento e do serviço necessário; consulte a equipe para um orçamento.'},
+    beforeAfterCase:{category:name,clinicalContext:'Serviço de refrigeração e manutenção realizado pela equipe.',beforeLabel:'Avaliação',afterLabel:'Serviço concluído',beforeImage:photos[index%photos.length],afterImage:photos[(index+1)%photos.length],timeframe:'Consulte a equipe sobre o prazo do serviço.'},
+    assignedDentistId:teamId,
+    faqs:[
+      {question:'Como solicitar ' + name.toLowerCase() + '?',answer:'Entre em contato pelo WhatsApp ' + phone + ', explique o serviço e informe o local do atendimento.'},
+      {question:'Posso enviar fotos ou um vídeo?',answer:'Sim. Envie fotos ou um vídeo pelo WhatsApp ' + phone + ' para explicar o que precisa.'},
+      {question:'Quais regiões são atendidas?',answer:'A PH atende Campo Grande, Barra da Tijuca, Recreio e região. Consulte a equipe para confirmar disponibilidade no seu endereço.'},
+      {question:'Quando recebo o orçamento?',answer:'A equipe conversa sobre o equipamento e o serviço, avalia o que é necessário e combina o orçamento antes de iniciar o trabalho.'},
+    ],
   };
 }
 export const SERVICES: ServiceDetail[] = serviceNames.map(createService);
 export interface EmergencyCondition { id:string; title:string; urgency:'Immediate (0–2 hours)'|'Same-Day (2–6 hours)'|'Urgent (Within 24 hours)'; symptoms:string[]; immediateAction:string[]; clinicTreatment:string; }
 export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
-  {id:'active-pipe-leak',title:'Active pipe leak',urgency:'Immediate (0–2 hours)',symptoms:['Water visibly leaking from a pipe','A growing wet area'],immediateAction:['Keep people and belongings clear of the affected area.','If safe, turn off the water supply.','Keep clear of wet electrical equipment.'],clinicTreatment:'Call ADM Plumbing Services on +65 8133 9461 for assistance.'},
-  {id:'toilet-flushing-problem',title:'Toilet flushing problem',urgency:'Same-Day (2–6 hours)',symptoms:['Toilet does not flush properly','Water continues running into the bowl'],immediateAction:['Avoid repeated flushing if the bowl is filling.','Keep the area clear and share a photo or video with the plumber.'],clinicTreatment:'WhatsApp ADM Plumbing Services on +65 8133 9461 to describe the issue.'},
+  {id:'falha-no-ar-condicionado',title:'Ar-condicionado parou de funcionar',urgency:'Same-Day (2–6 hours)',symptoms:['Equipamento não liga ou não refrigera','Ruído ou vazamento fora do habitual'],immediateAction:['Desligue o aparelho se houver cheiro de queimado ou risco elétrico.','Anote o modelo e quando o problema começou.','Envie uma foto ou vídeo pelo WhatsApp para explicar a situação.'],clinicTreatment:'Fale com a PH Soluções Inteligentes pelo WhatsApp para relatar o problema e combinar uma avaliação.'},
+  {id:'falha-eletrica',title:'Falha elétrica',urgency:'Immediate (0–2 hours)',symptoms:['Cheiro de queimado, faíscas ou tomada aquecida','Disjuntor desarmando repetidamente'],immediateAction:['Se for seguro, desligue o circuito no disjuntor.','Não toque em fios expostos ou equipamentos molhados.','Procure ajuda profissional para avaliar a instalação.'],clinicTreatment:'Entre em contato com a PH Soluções Inteligentes para conversar sobre o atendimento elétrico.'},
 ];
 export interface BlogPost { slug:string; title:string; category:string; readTime:string; publishDate:string; lastUpdated:string; authorId:string; excerpt:string; leadImage:string; relatedServiceSlug:string; content:{intro:string;sections:{heading:string;body:string}[];faqs?:{question:string;answer:string}[]}; }
 export const BLOG_POSTS: BlogPost[] = [
- {slug:'toilet-bowl-repair-signs',title:'Common toilet bowl problems to look out for',category:'Toilet Repairs',readTime:'3 min read',publishDate:'2026-10-22',lastUpdated:'2026-10-22',authorId:teamId,excerpt:'Running water, weak flushing and leaks are common reasons to arrange a toilet repair assessment.',leadImage:photos[1],relatedServiceSlug:'toilet-bowl-repair',content:{intro:'A toilet that keeps running, leaks or flushes weakly may need attention. Describe what is happening and arrange an assessment.',sections:[{heading:'Notice what the toilet is doing',body:'Note whether water continues running, the flush is weak or there is visible leaking around the bowl.'},{heading:'Share the details',body:'A photo or short video can help explain the issue. WhatsApp ADM Plumbing Services for an initial assessment.'}]}},
- {slug:'what-to-do-about-a-pipe-leak',title:'What to do when you notice a pipe leak',category:'Pipe Repairs',readTime:'3 min read',publishDate:'2026-10-22',lastUpdated:'2026-10-22',authorId:teamId,excerpt:'Simple steps can help you describe an active leak and keep the area clear while arranging help.',leadImage:photos[0],relatedServiceSlug:'pipe-leak-repair',content:{intro:'If you notice water leaking from a pipe, keep people and belongings clear of the affected area and contact a plumber.',sections:[{heading:'Keep the area safe',body:'If it is safe to do so, turn off the water supply. Keep clear of wet electrical fittings and equipment.'},{heading:'Share what you can see',body:'Note where the water is coming from and when it started. Photos or video can help the plumber understand the issue.'}]}},
- {slug:'bidet-and-flushing-repairs',title:'When to arrange a bidet or flushing system repair',category:'Plumbing Repairs',readTime:'3 min read',publishDate:'2026-10-22',lastUpdated:'2026-10-22',authorId:teamId,excerpt:'Get help with bidet faults, flushing issues and toilet water that keeps running.',leadImage:photos[2],relatedServiceSlug:'toilet-flushing-repair',content:{intro:'Flushing mechanism issues and bidet faults can disrupt everyday use. Describe the problem and ask a plumber to assess it.',sections:[{heading:'Describe the symptoms',body:'Share whether the flush is weak or incomplete, water keeps running, or the bidet needs repair.'},{heading:'Send a photo or video',body:'WhatsApp the details to ADM Plumbing Services for an initial assessment and next steps.'}]}},
- {slug:'kitchen-sink-and-hot-water-pipe-issues',title:'Kitchen sink and hot water pipe issues',category:'Plumbing Repairs',readTime:'3 min read',publishDate:'2026-10-22',lastUpdated:'2026-10-22',authorId:teamId,excerpt:'Share details about a kitchen sink fault or hot water pipe leak to arrange an assessment.',leadImage:photos[3],relatedServiceSlug:'kitchen-sink-repair',content:{intro:'A kitchen sink problem or leaking hot water pipe can need a plumber’s assessment. Describe the issue and when it occurs.',sections:[{heading:'Make a note of the issue',body:'Note where the water is appearing and whether it occurs continuously or only when the fixture is in use.'},{heading:'Arrange a plumbing assessment',body:'Contact ADM Plumbing Services by WhatsApp or phone to discuss repair options.'}]}},
+ {slug:'quando-higienizar-ar-condicionado',title:'Quando fazer a higienização do ar-condicionado',category:'Climatização',readTime:'3 min de leitura',publishDate:'2026-10-23',lastUpdated:'2026-10-23',authorId:teamId,excerpt:'A limpeza completa ajuda a cuidar do aparelho e da qualidade do ar em casa ou no trabalho.',leadImage:photos[1],relatedServiceSlug:'limpeza-e-higienizacao-de-ar-condicionado',content:{intro:'A higienização periódica do ar-condicionado ajuda a remover sujeira e odores e contribui para o bom funcionamento do equipamento. A PH Soluções Inteligentes realiza desmontagem para limpeza minuciosa e aplicação de bactericida.',sections:[{heading:'Fique atento aos sinais',body:'Poeira, odores, redução da eficiência e uso frequente podem indicar que é hora de avaliar a limpeza do aparelho.'},{heading:'Limpeza detalhada',body:'A equipe desmonta o equipamento para higienizar cuidadosamente as peças e aplica bactericida. O serviço ajuda a conservar o aparelho e evitar acúmulo de sujeira.'},{heading:'Agende pelo WhatsApp',body:'A PH atende Campo Grande, Barra da Tijuca, Recreio e região. Envie uma mensagem para conversar sobre a higienização.'}]}},
+ {slug:'sinais-de-que-o-ar-condicionado-precisa-de-reparo',title:'Sinais de que seu ar-condicionado precisa de manutenção',category:'Climatização',readTime:'3 min de leitura',publishDate:'2026-10-23',lastUpdated:'2026-10-23',authorId:teamId,excerpt:'Refrigeração fraca, ruídos e falhas no aparelho são bons motivos para pedir uma avaliação técnica.',leadImage:photos[0],relatedServiceSlug:'manutencao-e-conserto-de-ar-condicionado',content:{intro:'Mudanças no funcionamento do ar-condicionado podem indicar que o aparelho precisa de avaliação. Descreva os sintomas e peça orientação à equipe.',sections:[{heading:'Observe o funcionamento',body:'Anote quando o problema acontece, se o aparelho ainda refrigera e se há ruídos ou odores diferentes.'},{heading:'Compartilhe os detalhes',body:'Uma foto, um vídeo e o modelo do aparelho ajudam a equipe a entender o cenário e orientar os próximos passos.'}]}},
+ {slug:'cuidados-com-equipamentos-de-refrigeracao',title:'Cuidados com equipamentos de refrigeração comercial',category:'Refrigeração',readTime:'3 min de leitura',publishDate:'2026-10-23',lastUpdated:'2026-10-23',authorId:teamId,excerpt:'A manutenção de câmaras frias e equipamentos comerciais ajuda a acompanhar o desempenho e planejar reparos.',leadImage:photos[2],relatedServiceSlug:'refrigeracao-e-camaras-frias',content:{intro:'Equipamentos de refrigeração são importantes para a rotina de muitos negócios. Uma avaliação técnica pode ajudar a identificar falhas e planejar manutenção.',sections:[{heading:'Acompanhe o desempenho',body:'Observe variações de temperatura, ruídos e mudanças no funcionamento do equipamento.'},{heading:'Converse com um técnico',body:'Informe o tipo de equipamento, o local e o que percebeu para combinar uma avaliação e discutir as opções de serviço.'}]}},
+ {slug:'como-solicitar-um-servico-eletrico',title:'Como solicitar um serviço elétrico com segurança',category:'Elétrica',readTime:'3 min de leitura',publishDate:'2026-10-23',lastUpdated:'2026-10-23',authorId:teamId,excerpt:'Informações sobre o local e o tipo de instalação ajudam a planejar a avaliação elétrica.',leadImage:photos[3],relatedServiceSlug:'instalacoes-e-reparos-eletricos',content:{intro:'Para solicitar um serviço elétrico, descreva a instalação e o que precisa ser feito. A avaliação ajuda a definir o escopo e combinar o atendimento.',sections:[{heading:'Explique o que precisa',body:'Informe o endereço, a área do imóvel e se é uma instalação nova ou um reparo.'},{heading:'Priorize a segurança',body:'Se houver faíscas, cheiro de queimado ou fios expostos, mantenha distância e desligue o circuito apenas se for seguro.'}]}},
 ];
 export const CUSTOMER_REVIEWS = [
- {name:'Linda LL',date:'5 months ago',text:'Found Alen online and really glad I contacted him. He’s very friendly, helpful, and easy to deal with. He helped fix our flushing issue and also replaced our bidet smoothly. Really appreciate his help and great service.'},
- {name:'Ryan Merly Seah',date:'a year ago',text:'Alan was very knowledgeable and promptly resolved our issue of the hot water pipe joint being dislodged. He was able to explain that one side of the joint wasn’t clamped at all, thereby causing this leak over the course of a week post-installation by the original plumber.'},
- {name:'Salmah Aman',date:'3 months ago',text:'My toilet bowl was leaking water. I whatsapp ADM Plumbing Services Spore and Alan reply was prompt & efficient. Alan arrived punctually & completed the job very satisfactorily. I will definately recommend ADM Plumbing Services to my family & friends.'},
+ {name:'Filipe',date:'3 meses atrás',text:'Trabalho honesto e preço justo. Muito simpáticos, profissionais e atenciosos. Sucesso para vocês!'},
+ {name:'Micael Tavares',date:'2 meses atrás',text:'Paulinho é meu parceiro há anos… trabalha muito bem! Pode ligar para ele sem pensar duas vezes.'},
+ {name:'Jhonatan Pinho',date:'2 meses atrás',text:'Meu ar-condicionado está gelando muito bem. Atendimento rápido!'},
+ {name:'Leila Cristina Saraiva',date:'1 ano atrás',text:'Excelente atendimento do primeiro contato até os últimos detalhes. O técnico é muito qualificado e faz um trabalho minucioso, cuidadoso e atencioso. O ar-condicionado foi higienizado e o ambiente ficou com um cheiro maravilhoso. Recomendo muito!'},
+ {name:'Everton Dias',date:'2 meses atrás',text:'Excelente serviço e atenção meticulosa aos detalhes.'},
+ {name:'Silvana Viana',date:'1 ano atrás',text:'Fiquei muito satisfeita com o atendimento do Sr. Paulo. Ele foi prestativo e paciente ao responder minhas dúvidas. Instalou meu ar-condicionado perfeitamente. Recomendo muito.'},
+ {name:'Gabriel Anjos',date:'1 ano atrás',text:'Paulo Henrique e Priscila nos atenderam e foram nossos salvadores! Chegaram em 30 minutos e resolveram nosso problema rapidamente. Pode confiar!'},
 ];

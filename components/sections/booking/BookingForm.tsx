@@ -27,7 +27,7 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'plumbing-repairs',
+    service: 'manutencao-e-conserto-de-ar-condicionado',
     preferredDate: '',
     preferredTime: 'Morning (07:00 – 12:00)',
     notes: '',
@@ -40,16 +40,16 @@ export default function BookingForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Please enter your full name.';
+      newErrors.fullName = 'Informe seu nome completo.';
     }
     if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      newErrors.phone = 'Please provide a valid phone number.';
+      newErrors.phone = 'Informe um telefone válido.';
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
-      newErrors.email = 'Please provide a valid email address.';
+      newErrors.email = 'Informe um e-mail válido.';
     }
     if (!formData.preferredDate) {
-      newErrors.preferredDate = 'Please select a preferred quote request date.';
+      newErrors.preferredDate = 'Selecione a data desejada para o atendimento.';
     }
 
     setErrors(newErrors);
@@ -72,28 +72,28 @@ export default function BookingForm() {
     return (
       <div className="p-8 md:p-12 bg-forest text-paper transition-all duration-500 ease-nova-ease">
         <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-          Request Received
+          Solicitação recebida
         </span>
       <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          Quote request received
+          Solicitação recebida
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Thank you, {formData.fullName}. Our team will review your request and contact you at <strong className="text-lime">{formData.phone}</strong> to discuss an assessment.
+          Obrigado(a), {formData.fullName}. Nossa equipe entrará em contato pelo número <strong className="text-lime">{formData.phone}</strong> para conversar sobre uma avaliação.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Requested service:</span>
+            <span className="text-paper/60">Serviço solicitado:</span>
             <span className="text-paper font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Preferred Date:</span>
+            <span className="text-paper/60">Data desejada:</span>
             <span className="text-paper font-medium">{formData.preferredDate}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Preferred Window:</span>
+            <span className="text-paper/60">Horário desejado:</span>
             <span className="text-paper font-medium">{formData.preferredTime}</span>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'plumbing-repairs',
+                service: 'manutencao-e-conserto-de-ar-condicionado',
                 preferredDate: '',
                 preferredTime: 'Morning (07:00 – 12:00)',
                 notes: '',
@@ -116,13 +116,13 @@ export default function BookingForm() {
             }}
             className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
           >
-            Submit another request
+            Enviar outra solicitação
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
             className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
           >
-            Need help? Call: {CLINIC_INFO.contact.phone}
+            Precisa de ajuda? Ligue: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
@@ -137,17 +137,17 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request a Plumbing Quote
+          Solicitar orçamento
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Tell us what you would like to improve. Our team will contact you to discuss the project and next steps.
+          Conte o que precisa. Nossa equipe entrará em contato para conversar sobre o serviço e os próximos passos.
         </p>
       </div>
 
-      {/* Full Name */}
+      {/* Nome completo */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="fullName" className="font-body text-13 text-forest-ink/70">
-          Full Name <span className="text-forest">*</span>
+          Nome completo <span className="text-forest">*</span>
         </label>
         <input
           id="fullName"
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#756B75] transition-all duration-200">
+          <span className="font-body text-13 text-[#65788D] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -172,7 +172,7 @@ export default function BookingForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="phone" className="font-body text-13 text-forest-ink/70">
-            Telephone Number <span className="text-forest">*</span>
+            Telefone <span className="text-forest">*</span>
           </label>
           <input
             id="phone"
@@ -182,18 +182,18 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+65 8133 9461"
+            placeholder="+55 21 99481-7430"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#756B75]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#65788D]">{errors.phone}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="email" className="font-body text-13 text-forest-ink/70">
-            Email Address <span className="text-forest">*</span>
+            E-mail <span className="text-forest">*</span>
           </label>
           <input
             id="email"
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#756B75]">{errors.email}</span>
+            <span className="font-body text-13 text-[#65788D]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Project Type <span className="text-forest">*</span>
+          Tipo de serviço <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,15 +229,15 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Other plumbing work project</option>
+          <option value="general-consultation">Outro serviço</option>
         </select>
       </div>
 
-      {/* Preferred Date & Time */}
+      {/* Data desejada & Time */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredDate" className="font-body text-13 text-forest-ink/70">
-            Preferred Date <span className="text-forest">*</span>
+            Data desejada <span className="text-forest">*</span>
           </label>
           <input
             id="preferredDate"
@@ -252,13 +252,13 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#756B75]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#65788D]">{errors.preferredDate}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredTime" className="font-body text-13 text-forest-ink/70">
-            Preferred Time
+            Horário desejado
           </label>
           <select
             id="preferredTime"
@@ -276,14 +276,14 @@ export default function BookingForm() {
       {/* Additional project notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Tell Us About the Work (Optional)
+          Conte sobre o serviço (opcional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Describe the plumbing issue or work you would like to discuss..."
+          placeholder="Descreva o equipamento ou serviço que gostaria de conversar..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>
@@ -297,10 +297,10 @@ export default function BookingForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto"
         >
-          {isSubmitting ? 'Sending request...' : 'Request a Quote'}
+          {isSubmitting ? 'Enviando solicitação...' : 'Solicitar orçamento'}
         </Button>
         <span className="font-body text-13 text-forest-ink/60">
-          Your details will be used to respond to your enquiry.
+          Usaremos seus dados para responder à sua solicitação.
         </span>
       </div>
     </form>

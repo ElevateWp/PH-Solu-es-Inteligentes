@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-40 h-14 sm:w-48 sm:h-[70px] bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="ADM Plumbing Services logo"
+                  alt="PH Soluções Inteligentes logo"
                   width={220}
                   height={80}
                   className="object-contain w-full h-full"
@@ -22,18 +22,18 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  ADM Plumbing Services
+                  PH Soluções Inteligentes
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Toilet · Bidet · Pipe Repairs
+                  Refrigeração · Climatização · Elétrica
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Plumbing and building services across Singapore.
+              Refrigeração, climatização e elétrica em Campo Grande, Barra da Tijuca, Recreio e região.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+65 8133 9461</span>
+              <span>+55 21 99481-7430</span>
               {CLINIC_INFO.contact.email && <a href={`mailto:${CLINIC_INFO.contact.email}`} className="hover:text-paper">{CLINIC_INFO.contact.email}</a>}
             </div>
           </div>
@@ -41,10 +41,10 @@ export default function Footer() {
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Plumbing Services
+                Serviços de Climatização
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need a plumber? Call or WhatsApp ADM Plumbing Services.
+                Precisa de atendimento? Ligue ou chame a PH Soluções Inteligentes no WhatsApp.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -53,13 +53,13 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
                 >
-                  Call: {CLINIC_INFO.contact.phone}
+                  Ligue: {CLINIC_INFO.contact.phone}
                 </a>
                 <Link
                   href="/request-a-quote/"
                   className="font-body text-13 text-paper/80 underline underline-offset-4 hover:text-paper"
                 >
-                  Request a Quote
+                  Solicitar orçamento
                 </Link>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Footer() {
           {/* Column 1: technical Treatments */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Services
+              Serviços
             </span>
             <ul className="space-y-2.5 font-body text-15">
               {SERVICES.map((s) => (
@@ -90,12 +90,12 @@ export default function Footer() {
           {/* Column 2: technical Team */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Our Team
+              Nossa equipe
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet the Plumbing Services Team
+                  Conheça nossa equipe
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -114,50 +114,50 @@ export default function Footer() {
           {/* Column 3: The company */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Company
+              Empresa
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/about/" className="text-paper/80 hover:text-lime transition-colors">
-                  About Us
+                  Sobre nós
                 </Link>
               </li>
               <li>
                 <Link href="/services/" className="text-paper/80 hover:text-lime transition-colors">
-                  Plumbing Services
+                  Serviços de Climatização
                 </Link>
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Plumbing Advice
+                  Dicas de Climatização
                 </Link>
               </li>
               <li>
                 <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
-                  Request a Quote
+                  Solicitar orçamento
                 </Link>
               </li>
               <li>
                 <Link href="/contact/" className="text-paper/80 hover:text-lime transition-colors">
-                  Contact
+                  Contato
                 </Link>
               </li>
               <li>
                 <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
-                  Discuss Your Project
+                  Converse sobre seu serviço
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact Info */}
+          {/* Column 4: Contato Info */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Contact Details
+              Contato Details
             </span>
             <div className="space-y-3 font-body text-15 text-paper/80">
               <div>
-                <span className="text-paper/50 block text-13">Phone:</span>
+                <span className="text-paper/50 block text-13">Telefone:</span>
                 <a
                   href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                   target="_blank"
@@ -168,9 +168,9 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <span className="text-paper/50 block text-13">Service area:</span>
+                <span className="text-paper/50 block text-13">Região atendida:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
-                  {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.city} {CLINIC_INFO.primaryLocation.postalCode}
+                  {CLINIC_INFO.primaryLocation.directions}
                 </address>
               </div>
             </div>
@@ -180,10 +180,10 @@ export default function Footer() {
         {/* Bottom Section: Legal & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body text-13 text-paper/60">
           <div>
-            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {CLINIC_INFO.legalName}. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-6">
-            <a href="https://singaporeplumbingadm.com/" className="hover:text-paper">singaporeplumbingadm.com</a>
+            <a href="/" className="hover:text-paper">PH Soluções Inteligentes</a>
           </div>
         </div>
       </div>

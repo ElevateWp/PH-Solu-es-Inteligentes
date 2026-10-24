@@ -7,29 +7,29 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What plumbing services can I ask about?',
-    answer: 'Ask about plumbing toilet flushing system repairs, plumbing leaks, general plumbing repairs and other plumbing work.',
-    relatedLink: { href: '/services/', label: 'Explore our services →' },
+    question: 'Quais serviços a PH oferece?',
+    answer: 'Consulte sobre instalação, higienização e manutenção de ar-condicionado, elétrica, refrigeração, bombas, aquecedores e outros equipamentos.',
+    relatedLink: { href: '/services/', label: 'Conheça nossos serviços →' },
   },
   {
-    question: 'Do you cover my area?',
-    answer: 'The team is based near Singapore. Call to confirm availability for your address.',
-    relatedLink: { href: '/contact/', label: 'Contact our team →' },
+    question: 'Vocês atendem minha região?',
+    answer: 'A PH atende Campo Grande, Barra da Tijuca, Recreio e região. Consulte a equipe sobre disponibilidade no seu endereço.',
+    relatedLink: { href: '/contact/', label: 'Fale com nossa equipe →' },
   },
   {
-    question: 'Do you carry out plumbing repairs?',
-    answer: 'Yes. ADM Plumbing Services carries out plumbing repairs. Call to discuss your property and the work required.',
-    relatedLink: { href: '/plumbing-repairs/', label: 'Explore plumbing repairs →' },
+    question: 'A PH faz manutenção e reparo de equipamentos?',
+    answer: 'Sim. A equipe atende ar-condicionado, refrigeração, instalações elétricas e diversos equipamentos residenciais e comerciais.',
+    relatedLink: { href: '/manutencao-e-conserto-de-ar-condicionado/', label: 'Ver serviços de ar-condicionado →' },
   },
   {
-    question: 'How do I request a quote?',
-    answer: `Call us on ${CLINIC_INFO.contact.phone} or send a message through our quote request form.`,
-    relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
+    question: 'Como posso solicitar um orçamento?',
+    answer: `Ligue para ${CLINIC_INFO.contact.phone} ou envie uma mensagem pelo formulário de orçamento.`,
+    relatedLink: { href: '/request-a-quote/', label: 'Solicitar orçamento →' },
   },
   {
-    question: 'How can I confirm service availability?',
-    answer: `Call ${CLINIC_INFO.contact.phone} to discuss your property and confirm service availability.`,
-    relatedLink: { href: '/contact/', label: 'Contact our team →' },
+    question: 'Como confirmo a disponibilidade?',
+    answer: `Ligue para ${CLINIC_INFO.contact.phone} para conversar sobre seu imóvel e confirmar a disponibilidade.`,
+    relatedLink: { href: '/contact/', label: 'Fale com nossa equipe →' },
   },
 ];
 
@@ -41,20 +41,20 @@ export default function HomeFaqs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <AnimateOnScroll animation="fade-right" duration={0.85} className="lg:col-span-5">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Frequently Asked Questions
+              Perguntas frequentes
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about your plumbing project
+              Dúvidas sobre seu serviço
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                Find out about plumbing work, quotes and service availability.
+                Converse com a equipe sobre serviços, orçamento e disponibilidade.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
-                Have another question?
+                Ficou com alguma dúvida?
               </span>
               <p className="font-body text-13 text-forest-ink/70 mb-3">
-                Call or message our team and we will be happy to help.
+                Ligue ou envie uma mensagem. Será um prazer ajudar.
               </p>
               <a
                 href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -62,7 +62,7 @@ export default function HomeFaqs() {
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"
               >
-                Call our team
+                Fale com nossa equipe
               </a>
             </div>
           </AnimateOnScroll>

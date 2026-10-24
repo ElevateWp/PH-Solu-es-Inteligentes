@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Plumbing Services',
+  title: 'Refrigeração, Climatização e Elétrica',
   description:
-    'ADM Plumbing Services provides plumbing services in Singapore. Call +65 8133 9461.',
+    'Refrigeração, climatização e elétrica em Campo Grande, Barra da Tijuca, Recreio e região. WhatsApp: +55 21 99481-7430.',
   pathname: '/',
 });
 
@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* SECTION 3: Plumbing Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Plumbing Services"
+        title="Nossos serviços"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,10 +55,10 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose ADM Plumbing Services */}
+      {/* SECTION 4: Por que escolher a PH Soluções Inteligentes */}
       <HomeWhyUs />
 
-      {/* SECTION 5: Meet Our Team */}
+      {/* SECTION 5: Conheça nossa equipe */}
       <HomeDentists />
 
       {/* SECTION 6: Featured Plumbing Work */}
@@ -76,7 +76,7 @@ export default function HomePage() {
       {/* SECTION 11: Service Area and Opening Hours */}
       <HomeLocation />
 
-      {/* SECTION 12: Request a Quote */}
+      {/* SECTION 12: Solicitar orçamento */}
       <HomeFinalCTA />
     </div>
   );

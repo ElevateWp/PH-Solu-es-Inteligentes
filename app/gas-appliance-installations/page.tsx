@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation';
 
 export default function LegacyServiceRedirect() {
-  redirect('/plumbing-services/');
+  redirect('
+/instalacao-e-conversao-de-fogao-a-gas/
+');
 }

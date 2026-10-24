@@ -9,31 +9,31 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contact and Service Area',
+  title: 'Contato e região atendida',
   description:
-    'Contact ADM Plumbing Services on +65 8133 9461 to discuss plumbing services and repairs.',
+    'Fale com a PH Soluções Inteligentes pelo +55 21 99481-7430 para conversar sobre climatização, refrigeração e elétrica.',
   pathname: '/contact/',
 });
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full bg-paper">
-      {/* SECTION 1: Contact Introduction */}
+      {/* SECTION 1: Contato Introduction */}
       <section className="relative py-16 md:py-24 border-b border-mist overflow-hidden">
         <TextureBackground variant="Contato" className="opacity-30" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Contact', path: '/contact/' }]} />
+          <Breadcrumbs items={[{ name: 'Contato', path: '/contact/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Contact & Quotes
+                  Contato e orçamento
                 </span>
-                <WordRevealH1 text="Talk to the ADM Plumbing Services team." />
+                <WordRevealH1 text="Fale com a equipe PH Soluções Inteligentes." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Call us to discuss plumbing work, plumbing repairs or plumbing repairs.
+                  Ligue ou chame no WhatsApp para conversar sobre climatização, refrigeração e elétrica.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* SECTION 2-7: Contact Methods Directory, Hours, Address & Map */}
+      {/* SECTION 2-7: Contato Methods Directory, Hours, Address & Map */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -50,23 +50,23 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Get in Touch
+                    Fale conosco
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                    Contact Us
+                    Contato Us
                   </h2>
                   <a
                     href="/request-a-quote/"
                     className="mb-5 inline-flex min-h-11 items-center bg-brand px-5 font-body text-15 font-semibold text-white transition-colors hover:bg-brand-hover"
                   >
-                    Request a quote
+                    Solicitar orçamento
                   </a>
 
                   <div className="divide-y divide-mist border-t border-b border-mist">
-                    {/* Call */}
+                    {/* Ligue */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-mist/30 px-4 -mx-4 rounded-sm">
                       <div>
-                        <span className="font-body text-13 text-forest font-semibold block">Call our team</span>
+                        <span className="font-body text-13 text-forest font-semibold block">Fale com nossa equipe</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           target="_blank"
@@ -76,13 +76,13 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Plumbing enquiries</span>
+                      <span className="font-body text-13 text-forest font-medium">Atendimento</span>
                     </div>
 
                     {/* Phone */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Phone</span>
+                        <span className="font-body text-13 text-forest-ink/60 block">Telefone</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           className="font-display text-21 text-forest hover:underline"
@@ -90,7 +90,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Call to discuss availability</span>
+                      <span className="font-body text-13 text-forest-ink/60">Ligue para consultar a disponibilidade</span>
                     </div>
 
                   </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Service Area
+                    Região atendida
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
                     {CLINIC_INFO.name}
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.primaryLocation.directions}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    Call to confirm the service area and availability.
+                    Ligue to confirm the service area and availability.
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -121,7 +121,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Availability
+                    Disponibilidade
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
                     {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
@@ -129,7 +129,7 @@ export default function ContactPage() {
                         <span className="font-medium text-forest-ink">{item.day}</span>
                         <span className="tabular-nums text-forest-ink/80">{item.hours}</span>
                       </div>
-                    )) : <p className="p-3.5 text-forest-ink/80">Please call to confirm current availability.</p>}
+                    )) : <p className="p-3.5 text-forest-ink/80">Ligue para confirmar a disponibilidade atual.</p>}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -139,13 +139,13 @@ export default function ContactPage() {
                 <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-                      Service Area
+                      Região atendida
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
                       {CLINIC_INFO.name}
                     </h3>
                     <p className="font-body text-13 text-paper/80 leading-relaxed">
-                    Call to confirm service availability for your property.
+                    Ligue para confirmar a disponibilidade do serviço no seu endereço.
                     </p>
                   </div>
 
@@ -155,7 +155,7 @@ export default function ContactPage() {
                       variant="lime"
                       size="sm"
                     >
-                      Call our team
+                      Fale com nossa equipe
                     </Button>
                     <a
                       href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -163,7 +163,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
                     >
-                      Call: {CLINIC_INFO.contact.phone}
+                      Ligue: {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                 </div>
@@ -173,22 +173,22 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* SECTION 8: Final Contact / Appointment CTA */}
+      {/* SECTION 8: Final Contato / Appointment CTA */}
       <section className="py-20 md:py-28 bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Plumbing Quote
+                Orçamento de serviço
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Ready to request a quote?
+                Pronto para solicitar um orçamento?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/request-a-quote/" variant="lime" size="lg">
-              Request a Quote Online
+              Solicitar orçamento
             </Button>
           </AnimateOnScroll>
         </div>

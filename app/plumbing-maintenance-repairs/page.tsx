@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation';
 
 export default function LegacyServiceRedirect() {
-  redirect('/plumbing-repairs/');
+  redirect('
+/manutencao-e-conserto-de-ar-condicionado/
+');
 }

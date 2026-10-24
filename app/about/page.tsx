@@ -14,36 +14,36 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About ADM Plumbing Services',
+  title: 'Sobre a PH Soluções Inteligentes',
   description:
-    'Learn about ADM Plumbing Services and its plumbing services. Call +65 8133 9461 to discuss your project.',
+    'Conheça a PH Soluções Inteligentes. Ligue para +55 21 99481-7430 e converse com a equipe sobre seu serviço.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Singapore',
-    title: 'Services for your property',
-    description: 'ADM Plumbing Services provides plumbing services and repairs. Contact the team to discuss the work you need.',
+    year: 'Rio de Janeiro',
+    title: 'Serviços for your property',
+    description: 'A PH Soluções Inteligentes trabalha com refrigeração, climatização e elétrica. Fale com a equipe sobre o serviço que precisa.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
-    title: 'Listen and plan',
-    description: 'We discuss the plumbing, the issue you have noticed and the work you would like done.',
+    title: 'Escutar e planejar',
+    description: 'Conversamos sobre sua necessidade e o serviço que gostaria de realizar.',
   },
   {
-    title: 'Clear Quotes',
-    description: 'We explain the work scope, materials and timing before the job begins.',
+    title: 'Orçamento transparente',
+    description: 'Explicamos o serviço, os materiais e o prazo antes de começar.',
   },
   {
-    title: 'Careful workmanship',
-    description: 'We take care with the plumbing work agreed for your property.',
+    title: 'Trabalho cuidadoso',
+    description: 'Realizamos com cuidado o serviço combinado para seu imóvel ou empresa.',
   },
   {
-    title: 'Keep you informed',
-    description: 'We discuss the work with you from the quote through to completion.',
+    title: 'Comunicação clara',
+    description: 'Mantemos você informado desde o orçamento até a conclusão.',
   },
 ];
 
@@ -53,17 +53,17 @@ export default function AboutPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'About Us', path: '/about/' }]} />
+          <Breadcrumbs items={[{ name: 'Sobre nós', path: '/about/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About ADM Plumbing Services
+                  Sobre a PH Soluções Inteligentes
                 </span>
-                <WordRevealH1 text="Plumbing Services for your property." />
+                <WordRevealH1 text="Climatização, Refrigeração e Elétrica" />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="ADM Plumbing Services provides plumbing services and repairs. Contact the team to discuss your property and the work you need." />
+                  <ScrubbedParagraph text="A PH Soluções Inteligentes trabalha com refrigeração, climatização e elétrica. Fale com a equipe sobre seu imóvel e o serviço que precisa." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Call</span>
-                    <span className="font-medium text-forest">+65 8133 9461</span>
+                    <span>Ligue</span>
+                    <span className="font-medium text-forest">+55 21 99481-7430</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -88,10 +88,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-2xl mb-16">
               <span className="font-body text-13 text-paper/60 uppercase tracking-wider block mb-2 font-medium">
-                Our Experience
+                Nossa experiência
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Our Company
+                Nossa empresa
               </h2>
             </div>
           </AnimateOnScroll>
@@ -121,7 +121,7 @@ export default function AboutPage() {
         </div>
       </PanelWipe>
 
-      {/* SECTION 3: Our Approach */}
+      {/* SECTION 3: Nosso jeito de trabalhar */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 How We Work
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Our Approach
+                Nosso jeito de trabalhar
               </h2>
             </div>
           </AnimateOnScroll>
@@ -161,24 +161,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe ADM Plumbing Services */}
+      {/* SECTION 4: Equipe PH Soluções Inteligentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Team
+                  Nossa equipe
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the ADM Plumbing Services Team
+                  Conheça a equipe PH Soluções Inteligentes
                 </h2>
               </div>
               <Link
                 href="/our-team/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
-                View Team Details →
+                Conheça a equipe →
               </Link>
             </div>
           </AnimateOnScroll>
@@ -191,29 +191,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Plumbing Services Work */}
+      {/* SECTION 5: Serviços de Climatização Work */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Plumbing Services
+                  Nossos serviços
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Plumbing repairs for your property
+                  Climatizaçãos for your property
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  The team can discuss plumbing work, repairs and suitable next steps for your property.
+                  A equipe pode conversar sobre climatização, refrigeração, elétrica e o melhor próximo passo para seu imóvel.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>The project scope and practical details are discussed before work begins</span>
+                    <span>O escopo e os detalhes do serviço são conversados antes de começar</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Careful finishing and attention to detail</span>
+                    <span>Cuidado na execução e atenção aos detalhes</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -225,14 +225,14 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="/images/plumbing-technician.jpg"
-                      alt="Plumbing work in progress"
+                      alt="Serviço técnico em andamento"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Plumbing work
+                    Serviços técnicos
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 Project inspiration
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Plumbing service information
+                Informações sobre nossos serviços
               </h2>
             </div>
           </AnimateOnScroll>
@@ -260,13 +260,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/plumbing-repair.jpg"
-                  alt="Plumbing project"
+                  alt="Serviço técnico"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Plumbing reference
+                  Referência de serviço
                 </div>
               </div>
             </AnimateOnScroll>
@@ -274,13 +274,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/plumbing-pipes.jpg"
-                  alt="Plumbing pipes project"
+                  alt="Tubulações e instalações project"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Plumbing pipes
+                  Tubulações e instalações
                 </div>
               </div>
             </AnimateOnScroll>
@@ -288,13 +288,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/plumbing-hot-water.jpg"
-                  alt="Plumbing project"
+                  alt="Serviço técnico"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Plumbing repair
+                  Climatização
                 </div>
               </div>
             </AnimateOnScroll>
@@ -308,23 +308,23 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Request a Quote
+                Solicitar orçamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Tell us about your plumbing work plans
+                Conte à equipe o que você precisa
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability.
+                Ligue us to discuss the work you need and check availability.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/request-a-quote/" variant="lime" size="lg">
-                Request a Quote
+                Solicitar orçamento
               </Button>
               <Button href="/contact/" variant="ghost-light" size="lg">
-                Contact Us
+                Contato Us
               </Button>
             </div>
           </AnimateOnScroll>

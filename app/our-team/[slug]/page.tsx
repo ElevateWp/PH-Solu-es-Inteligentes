@@ -67,13 +67,13 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'ADM Plumbing Services team', path: '/our-team/' },
+              { name: 'PH Soluções Inteligentes team', path: '/our-team/' },
               { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
-            {/* Illustrative plumbing team image */}
+            {/* Imagem ilustrativa da equipe técnica */}
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
@@ -87,8 +87,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Business experience:</span>
-                  <span className="font-medium text-forest">{dentist.experienceYears}+ years of experience</span>
+                  <span>Experiência profissional:</span>
+                  <span className="font-medium text-forest">{dentist.experienceYears}+ anos de experiência</span>
                 </div>}
               </AnimateOnScroll>
             </div>
@@ -108,7 +108,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="p-6 bg-mist/30 border-l-2 border-forest mb-8 shadow-sm">
                   <span className="font-body text-13 text-forest font-medium uppercase tracking-wider block mb-2">
-                    Our Approach
+                    Nosso jeito de trabalhar
                   </span>
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed italic">
                     “{dentist.philosophy}”
@@ -117,10 +117,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="flex flex-wrap items-center gap-4">
                   <Button href="/request-a-quote/" variant="forest" size="lg">
-                    Request a quote from {dentist.name}
+                    Solicitar orçamento from {dentist.name}
                   </Button>
                   <Button href="/our-team/" variant="ghost" size="lg">
-                    Back to Our Team
+                    Back to Nossa equipe
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -136,7 +136,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.education.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Experience and Specialties
+                  Experiência e especialidades
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.education.map((edu, idx) => (
@@ -152,7 +152,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             {dentist.memberships.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Team Information
+                  Informações da equipe
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.memberships.map((mem, idx) => (
@@ -168,7 +168,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         </div>
       </section>}
 
-      {/* Related Services */}
+      {/* Related Serviços */}
       {relatedServices.length > 0 && (
         <section className="py-20 md:py-32 border-b border-mist">
           <div className="max-w-site mx-auto px-6 md:px-12">
@@ -178,7 +178,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   Areas of Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Services from {dentist.name}
+                  Serviços from {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -215,16 +215,16 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Request a Quote
+                Solicitar orçamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Would you like to request a quote from {dentist.name}?
+                Gostaria de solicitar um orçamento com {dentist.name}?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/request-a-quote/" variant="lime" size="lg">
-              Request a Quote
+              Solicitar orçamento
             </Button>
           </AnimateOnScroll>
         </div>

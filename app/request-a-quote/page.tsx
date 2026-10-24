@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Plumbing Quote',
+  title: 'Solicitar orçamento',
   description:
-    'Request a quote for plumbing services or repairs from ADM Plumbing Services. Call +65 8133 9461.',
+    'Solicite um orçamento para refrigeração, climatização ou elétrica. WhatsApp: +55 21 99481-7430.',
   pathname: '/request-a-quote/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Send Your Request',
-    description: 'Tell us about your plumbing project and how you would like us to contact you.',
+    title: 'Envie sua solicitação',
+    description: 'Conte qual serviço você precisa e como prefere receber nosso retorno.',
   },
   {
     step: 2,
-    title: 'Team Review',
-    description: 'Our team reviews your enquiry and discusses availability and next steps.',
+    title: 'Análise da solicitação',
+    description: 'Nossa equipe avalia sua solicitação e conversa com você sobre disponibilidade e próximos passos.',
   },
   {
     step: 3,
-    title: 'We Get in Touch',
-    description: 'We contact you to discuss your request and arrange an assessment.',
+    title: 'We Fale conosco',
+    description: 'Entramos em contato para conversar sobre sua solicitação e combinar uma avaliação.',
   },
   {
     step: 4,
-    title: 'Plumbing Work',
-    description: 'The ADM Plumbing Services team completes the agreed work at your property.',
+    title: 'Serviço técnico',
+    description: 'A equipe PH realiza o serviço combinado no seu imóvel ou empresa.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/request-a-quote/' }]} />
+          <Breadcrumbs items={[{ name: 'Solicitar orçamento', path: '/request-a-quote/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Personal Service
+                  Atendimento personalizado
                 </span>
-                <WordRevealH1 text="Request a plumbing quote." />
+                <WordRevealH1 text="Solicite um orçamento." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about the plumbing work you need and the team will discuss availability and next steps." />
+                  <ScrubbedParagraph text="Conte à equipe qual serviço precisa e vamos conversar sobre disponibilidade e próximos passos." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,9 +62,9 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Call our team:</span>
+                  <span className="font-medium text-forest block">Fale com nossa equipe:</span>
                   <p className="text-forest-ink/70">
-                    Prefer to speak with us directly? Call during opening hours.
+                    Prefer to speak with us directly? Ligue during opening hours.
                   </p>
                   <a
                     href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
@@ -131,24 +131,24 @@ export default function BookAppointmentPage() {
         </div>
       </section>
 
-      {/* SECTION 4, 5, 6: Contact Options, Opening Hours, Service Area */}
+      {/* SECTION 4, 5, 6: Contato Options, Opening Horários, Região atendida */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Contact Options */}
+            {/* Contato Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contact</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Talk to Our Team</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Fale com nossa equipe</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
-                    <span className="text-forest-ink/60 block">Phone:</span>
+                    <span className="text-forest-ink/60 block">Telefone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <span className="text-forest-ink/60 block">Phone:</span>
+                    <span className="text-forest-ink/60 block">Telefone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
@@ -157,29 +157,29 @@ export default function BookAppointmentPage() {
               </div>
             </AnimateOnScroll>
 
-            {/* Opening Hours */}
+            {/* Opening Horários */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Hours</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Opening Hours</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horários</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Opening Horários</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
                       <span>{item.day}</span>
                       <span className="tabular-nums">{item.hours}</span>
                     </div>
-                  )) : <p>Please call to confirm current opening hours.</p>}
+                  )) : <p>Ligue para confirmar o horário de atendimento atual.</p>}
                 </div>
               </div>
             </AnimateOnScroll>
 
-            {/* Service Area */}
+            {/* Região atendida */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Região atendida</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve  and surrounding areas. Contact us to confirm availability for your property.
+                  We serve  and surrounding areas. Contato us to confirm availability for your property.
                 </p>
               </div>
             </AnimateOnScroll>

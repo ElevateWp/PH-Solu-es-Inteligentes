@@ -13,16 +13,16 @@ export default function HomeLocation() {
         <AnimateOnScroll animation="fade-up" duration={0.8}>
           <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Contact & Availability
+              Contato & Disponibilidade
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Get in Touch
+              Fale conosco
             </h2>
           </div>
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Columns 1–6: Address, Contact & Opening Hours Table */}
+          {/* Columns 1–6: Address, Contato & Opening Hours Table */}
           <div className="lg:col-span-6 flex flex-col space-y-8">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <div>
@@ -30,10 +30,10 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-2">
-                  {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.city} {CLINIC_INFO.primaryLocation.postalCode}
+                  {CLINIC_INFO.primaryLocation.directions}
                 </p>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  Call to discuss plumbing services work and confirm service availability.
+                  Ligue para conversar sobre os serviços e confirmar disponibilidade.
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -42,7 +42,7 @@ export default function HomeLocation() {
                 )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#FFF4F6] border border-[#EADCE1] px-3 py-1.5 text-12 text-[#29212A]">
+                    <span key={highlight} className="bg-[#F3F7FC] border border-[#D8E3EF] px-3 py-1.5 text-12 text-[#172B45]">
                       {highlight}
                     </span>
                   ))}
@@ -54,7 +54,7 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
               <div>
                 <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-3 font-semibold">
-                  Availability
+                  Disponibilidade
                 </span>
                 <div className="border border-mist overflow-hidden bg-paper shadow-sm p-4 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.length > 0
@@ -63,7 +63,7 @@ export default function HomeLocation() {
                           <span>{item.day}</span><span>{item.hours}</span>
                         </div>
                       ))
-                    : 'Please call to confirm current availability.'}
+                    : 'Ligue para confirmar a disponibilidade atual.'}
                 </div>
               </div>
 
@@ -73,10 +73,10 @@ export default function HomeLocation() {
                   variant="ghost"
                   size="md"
                 >
-                  Check Availability
+                  Check Disponibilidade
                 </Button>
                   <Button href="/contact/" variant="forest" size="md">
-                  Contact Us
+                  Fale conosco
                 </Button>
               </div>
             </AnimateOnScroll>
@@ -88,13 +88,13 @@ export default function HomeLocation() {
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/plumbing-technician.jpg"
-                  alt="Plumbing work in progress"
+                  alt="Serviço técnico em andamento"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  ADM Plumbing Services
+                  PH Soluções Inteligentes
                 </div>
               </div>
             </AnimateOnScroll>
@@ -103,17 +103,17 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Plumbing Services
+                    Serviços de Climatização
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Plumbing repairs, hot water pipe, pipe leak repairs and plumbing work
+                    Climatização, refrigeração, elétrica e manutenção de equipamentos
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Call or WhatsApp the team to discuss your plumbing issue and arrange an assessment.
+                    Ligue ou chame no WhatsApp para conversar sobre o serviço e combinar uma avaliação.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-                    <span>Phone: {CLINIC_INFO.contact.phone}</span>
+                    <span>Telefone: {CLINIC_INFO.contact.phone}</span>
                   </div>
                 </div>
 
@@ -126,7 +126,7 @@ export default function HomeLocation() {
                     variant="forest"
                     size="sm"
                   >
-                    Contact Us
+                    Fale conosco
                   </Button>
                 </div>
               </div>

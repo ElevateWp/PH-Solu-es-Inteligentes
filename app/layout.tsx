@@ -9,19 +9,19 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://singaporeplumbingadm.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'ADM Plumbing Services | Plumber Singapore',
+    default: 'PH Soluções Inteligentes | Refrigeração e Elétrica',
     template: '%s',
   },
   description:
-    'Contact ADM Plumbing Services in Singapore for toilet bowl, bidet, sink and pipe repairs. Call or WhatsApp +65 8133 9461.',
+    'Refrigeração, climatização e elétrica no Rio de Janeiro. Atendimento em Campo Grande, Barra da Tijuca, Recreio e região. Ligue ou chame no WhatsApp: +55 21 99481-7430.',
   keywords: [
-    'ADM Plumbing Services',
-    'plumbing services Singapore',
-    'plumbing repairs',
+    'PH Soluções Inteligentes',
+    'refrigeração Rio de Janeiro',
+    'instalação de ar-condicionado',
   ],
-  authors: [{ name: 'ADM Plumbing Services' }],
+  authors: [{ name: 'PH Soluções Inteligentes' }],
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-SG" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -48,12 +48,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#FCE0E8] selection:text-[#29212A]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#DCEBFF] selection:text-[#172B45]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Skip to main content
+          Pular para o conteúdo principal
         </a>
         <LenisProvider>
           <Navbar />
